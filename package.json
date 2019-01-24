@@ -1,0 +1,19 @@
+{
+  "name": "test-electron",
+  "version": "1.0.0",
+  "description": "Test app for me to learn electron and spectron",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordansandberg/test-electron.git"
+  },
+  "author": "Jordan Sandberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordansandberg/test-electron/issues"
+  },
+  "homepage": "https://github.com/jordansandberg/test-electron#readme"
+}
