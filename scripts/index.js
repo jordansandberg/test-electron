@@ -1,6 +1,32 @@
 // Test electron application file
 
 const { app, BrowserWindow } = require('electron')
+const Application = require('spectron').Application;
+const path = require('path');
+const chai = require('chai');
+const chaiAsPromised = require('chai-as-pomised');
+
+// create path for spectron to run app from
+var electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
+
+// modification for windows
+if(process.platform == 'win32') {
+  electronPath += '.cmd';
+}
+
+
+var appPath = path.join(__dirname, '..')
+
+var app = new Application({
+  path: electronPath,
+  args: [appPath]
+});
+
+// set up Chai
+global.before(function () {
+  chai.should();
+  chai.use(chaiAsPromised);
+});
 
 function createWindow () {
   // Create the browser window.
