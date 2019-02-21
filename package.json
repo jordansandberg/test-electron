@@ -5,7 +5,7 @@
   "main": "scripts/index.js",
   "scripts": {
     "test:e2e": "./node_modules/mocha/bin/mocha tests/test.js",
-    "start":"electron ."
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/jordansandberg/test-electron/issues"
   },
-  "homepage": "https://github.com/jordansandberg/test-electron#readme"
+  "homepage": "https://github.com/jordansandberg/test-electron#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "spectron": "^5.0.0",
+    "chai-as-promised": "^7.1.1"
+  }
 }
