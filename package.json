@@ -4,7 +4,7 @@
   "description": "Test app for me to learn electron and spectron",
   "main": "scripts/index.js",
   "scripts": {
-    "test:e2e": "./node_modules/mocha/bin/mocha tests/test.js",
+    "test": "mocha test",
     "start": "electron ."
   },
   "repository": {
@@ -21,6 +21,7 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "jquery": "^3.3.1",
+    "mocha": "^6.0.2",
     "spectron": "^5.0.0"
   }
 }

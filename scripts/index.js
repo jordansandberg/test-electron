@@ -1,33 +1,10 @@
 // Test electron application file
 
 const { app, BrowserWindow } = require('electron')
-const Application = require('spectron').Application;
 const path = require('path');
-const chai = require('chai');
-const chaiAsPromised = require('chai-as-promised');
+
 const {ipcMain} = require('electron');
 
-// // create path for spectron to run app from
-// var electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
-
-// // modification for windows
-// if(process.platform == 'win32') {
-//   electronPath += '.cmd';
-// }
-
-
-// var appPath = path.join(__dirname, '..')
-
-// var appTest = new Application({
-//   path: electronPath,
-//   args: [appPath]
-// });
-
-// // set up Chai
-// global.before(function () {
-//   chai.should();
-//   chai.use(chaiAsPromised);
-// });
 let mainWindow;
 let secondWindow;
 
@@ -45,11 +22,12 @@ function createWindow () {
     resizable: true,
     show: false 
   })
+  
   // and load the index.html of the app.
   mainWindow.loadFile('templates/index.html')
   secondWindow.loadFile('templates/red.html')
   
-  // // Open the DevTools.
+  // Open the DevTools.
   mainWindow.webContents.openDevTools()
 }
 
