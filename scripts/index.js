@@ -15,25 +15,13 @@ function createWindow () {
     height: 600,
     resizable: true, 
   })
-
-  secondWindow = new BrowserWindow({
-    width: 800, 
-    height: 600,
-    resizable: true,
-    show: false 
-  })
   
   // and load the index.html of the app.
   mainWindow.loadFile('templates/index.html')
-  secondWindow.loadFile('templates/red.html')
   
   // Open the DevTools.
-  mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 }
-
-ipcMain.on('changeRed', (event, arg) => {
-  secondWindow.show()
-})
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
