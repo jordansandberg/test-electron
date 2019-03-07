@@ -5,7 +5,7 @@
 
 </head>
 
-<body>
+<body id="#body">
 	<h1 class='title'>Choose a Color</h1>
 	<div class="buttons">
 		<button id="red">Red</button>
@@ -13,9 +13,16 @@
 		<button id="green">Green</button> 
 	</div>
 </body>
-
-<script>
-	require('../scripts/ipc')
-</script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script> 
 <script src="../static/scripts/style.js" type="text/javascript"></script>
+<script>
+	$("#red").click(function(){
+		$("body").css("background-color", "red");
+	});
+	$("#blue").click(function(){
+		$("body").css("background-color","blue");
+	})
+	$("#green").click(function(){
+		$("body").css("background-color","pink");
+	})
+</script>

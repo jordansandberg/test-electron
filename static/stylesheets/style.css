@@ -1,16 +1,6 @@
-body.red{
-	background-color: red;
+#body { 
+	background-color: white;
 }
-
-body.blue{
-	background-color: blue;
-}
-
-body.green{
-	background-color: green;
-}
-
-
 h1.title{
 	margin: auto;
 	width: 50%;	
