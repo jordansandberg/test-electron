@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <head>
-	<title>Color Change App</title>
+	<title>Colour Changing App</title>
 	<link rel="stylesheet" href="../static/stylesheets/style.css">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 
 <body id="#body">
+
 	<h1 class='title'>Choose a Color</h1>
-	<div class="buttons">
-		<button id="red">Red</button>
-		<button id="blue">Blue</button>
-		<button id="green">Green</button> 
+	
+	<div class="colour-box">
+
+	</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<button type="button" class="btn btn-secondary center-block" id="red">Red</button>
+			</div>
+			<div class="col-sm-4">
+				<button type="button" class="btn btn-secondary center-block" id="blue">Blue</button>
+			</div>
+			<div class="col-sm-4">
+				<button type="button" class="btn btn-secondary center-block" id="green">Green</button>
+			</div>
+		</div>
 	</div>
 </body>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script> 
 <script src="../static/scripts/style.js" type="text/javascript"></script>
+
 <script>
 	$("#red").click(function(){
-		$("body").css("background-color", "red");
+		$(".colour-box").css("background-color", "red");
 	});
 	$("#blue").click(function(){
-		$("body").css("background-color","blue");
+		$(".colour-box").css("background-color","blue");
 	})
 	$("#green").click(function(){
-		$("body").css("background-color","pink");
+		$(".colour-box").css("background-color","pink");
 	})
 </script>

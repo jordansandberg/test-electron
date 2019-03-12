@@ -8,13 +8,13 @@ chai.should();
 chai.use(chaiAsPromised)
 
 // point to the Electron node module
-var electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
+var electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron')
 
 if (process.platform === 'win32') {
-    electronPath += '.cmd';
+    electronPath += '.cmd'
 }
 
-var appPath = path.join(__dirname, '..');
+var appPath = path.join(__dirname, '..')
 
 console.log(appPath);
 console.log(electronPath)
@@ -41,7 +41,7 @@ describe("Window-change",function(){
     // run before each test
     beforeEach(function () {
         this.timeout(20000)
-        return app.start();
+        return app.start()
     });
 
     //run after each test
@@ -51,25 +51,37 @@ describe("Window-change",function(){
 
     // it() are test cases
     it('should turn the background red', function(done){
-        app.client.element('#red')
-            .click()
-            .then(app.client.element('body').getCSSProperty('background-color'))
-            .then(body => {
-                console.log(body)
-                body.getCSSProperty('background-color')
-            }).then(bgColor => {
-                console.log(bgColor)
-                chai.assert.equal(bgColor.value, 'red', 'background color should be red')
-                done()
-            })
-            .catch(done)
+        // app.client.element('#red')
+        //     .click()
+        //     .then(app.client.element('body').getAttribute('style'))
+        //     .then(html => {
+        //         console.log(html)
+        //     })
+        //     .catch(done)
+        app.client.element('#red').click()
+        app.client.element('.colour-box').getAttribute('style')
+        .then(style => {
+            chai.assert.equal('background-color: red;', style)
+            done()
+        }).catch(done)   
     });
 
-    // it('should turn the background green', function(done){
-    //     return false
-    // })
+    it('should turn the background blue', function(done){
+        app.client.element('#blue').click()
+        app.client.element('.colour-box').getAttribute('style')
+        .then(style => {
+            chai.assert.equal('background-color: blue;', style)
+            done()
+        }).catch(done)  
+    })
 
-    // it('should turn the background blue', function(done){
-    //     return false
-    // })
+    it('should turn the background green', function(done){
+        app.client.element('#green').click()
+        app.client.element('.colour-box').getAttribute('style')
+        .then(style => {
+            chai.assert.equal('background-color: green;', style)
+            done()
+        }).catch(done)  
+    })
+
 });

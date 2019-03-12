@@ -2,19 +2,27 @@
 	background-color: white;
 }
 h1.title{
+	padding-top: 60px;
+	font-size: 4em;
 	margin: auto;
 	width: 50%;	
 	text-align: center;
 }
-
-div.buttons{
-	margin: 20% auto;
-	width: 75%;
+div.colour-box{
+	margin: 5% auto;
+	height: 100px;
+	width: 100px;
+	border:1px solid black;
 }
-
-div.buttons > *{
-	/* text-align: center; */
-	width: 22%;
-	margin: 0 5%;
-	border-radius: 25%;
+.btn#red{
+	padding: 6px 59.85px; 
+    font-size: 21px;
+}
+.btn#blue{
+	padding: 6px 56.35px; 
+    font-size: 21px;
+}
+.btn#green{
+	padding: 6px 40px; 
+    font-size: 21px;
 }
